@@ -1,0 +1,807 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+html, body{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -.2px;
+}
+
+.mobilmeny{
+    display: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 25px 0px 25px;
+    background-color: white;
+}
+header.scrolled{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(173, 173, 173);
+    z-index: 9999;
+}
+
+.logga a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.logga h1{
+    margin-left: 80px;
+    font-size: 25px;
+}
+.logo{
+    width: 150px;
+    margin-left: 80px;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    padding-top: 100px;
+    color: #000000;
+    font-size: 40px;
+}
+h3{
+    color: #000000;
+    font-size: 25px;
+}
+h5{
+    font-size: 30px;
+}
+h6{
+    font-size: 20px;
+    color: #2f312f;
+}
+p{
+    font-size: 16px;
+}
+#meny{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 430px;
+}
+#meny li{
+    font-size: 14px;
+}
+#meny ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-decoration: none;
+    list-style-type: none;
+}
+#meny a{
+    padding: 10px;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+#meny a:hover{
+    background-color: rgb(247, 216, 192);
+    border-radius: 5px;
+}
+#meny a.active{
+    border-bottom: 1px solid black;
+}
+.welcome{
+    width: 100%;
+    height: auto;
+    padding: 150px 0px 80px;
+    background-color: rgb(236, 208, 182);
+    z-index: 5;
+
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 100px;
+}
+.storbokstav{
+    font-size: 60px;
+}
+.kraftborsten {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid rgb(163, 163, 163);
+  align-items: center;
+  position: relative;
+  height: 420px;
+  border-radius: 5px;
+}
+
+.kraftborsten:hover{
+    border: 1px solid black;
+}
+
+.bild-wrap {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bild-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s;
+}
+
+.bild-wrap .normal {
+  opacity: 1 !important;
+  z-index: 2;
+}
+
+.bild-wrap .hover-img {
+  opacity: 0;
+  z-index: 3;
+}
+
+.kraftborsten:hover .hover-img {
+  opacity: 1;
+}
+
+
+.kraftborsten:hover .normal {
+  opacity: 0;
+}
+.pris{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.pris-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.addtocart{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(192, 192, 57);
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.kontaktknapp{
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.kontaktknapp:hover{
+    transform: scale(5);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.welcome-meny{
+    display: flex;
+    gap: 40px;
+}
+.welcome-meny a{
+    text-decoration: none;
+    list-style-type: none;
+    color: #646363;
+    border: 1px solid black;
+    padding: 15px 20px 15px 20px;
+}
+.welcome-meny a:hover{
+    transform: scale(0.90);
+}
+
+#badrum{
+    width: 550px;
+}
+#readmore{
+    background-color: rgb(243, 216, 180);
+    border: 1px solid rgb(243, 216, 180);
+}
+.kontakt-lista{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 30px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+.kontakt-lista a{
+    color: rgb(43, 43, 43);
+    text-decoration: none;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+    gap: 150px;
+}
+.produkter{
+    display: flex;
+    flex-direction: row;
+    padding: 150px 80px 250px;
+    gap: 100px;
+}
+#fade{
+    width: 850px;
+    height: auto;
+}
+.column2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+footer{
+    position: relative;
+    border-top: 4px solid #585f58;
+    width: 100%;
+    background-color: #494949;
+    color: white;
+    padding: 70px 0px;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* flytta upp trekanten över kanten */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid white; /* Färgen på BAKGRUNDEN ovanför footern */
+  z-index: 1;
+}
+
+.footerkontakt::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* flytta upp trekanten över kanten */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid rgb(250, 238, 224); /* Färgen på BAKGRUNDEN ovanför footern */
+  z-index: 1;
+}
+
+
+.fa-envelope, .fa-phone, .fa-location-dot{
+    padding-right: 10px;
+}
+.fa-instagram{
+    font-size: 70px;
+    color: #585f58;
+}
+.fa-instagram:hover, .instagram-div h3:hover {
+    transform: scale(1.2);
+}
+.instagram-div a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+    text-decoration: none;
+    
+}
+.instagram-div{
+    background-color: rgb(245, 227, 207);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.instatagg{
+    color: black;
+    margin-top: 20px;
+}
+
+.instagram-div h3{
+    font-size: 30px;
+}
+.meny-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+
+}
+.footer-column1{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 200px;
+
+}
+.footer-column2{
+    padding-right: 200px;
+}
+.footer-column1 ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    gap: 40px;
+}
+.footer-column2 ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    gap: 20px;
+}
+.footer-column1 ul, .footer-column2 ul,
+.footer-column1 ul li, .footer-column2 ul li {
+  text-align: left;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+}
+.footer-column1 a, .footer-column2 a{
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+.footer-column1 h4, .footer-column2 h4{
+    font-size: 20px;
+}
+
+.bestallarbeteknapp{
+    padding: 20px 30px;
+    border: 1px solid white;
+}
+.boka:hover, .behandling-boka:hover{
+    transform: scale(0.85);
+}
+.omoss-boka{
+    padding: 20px;
+    border: 1px solid #000;
+}
+.kontakt-boka{
+    width: 125px;
+    padding: 20px;
+    border: 1px solid #000;
+    text-align: center;
+}
+.kontakt-boka:hover{
+    transform: scale(0.90);
+}
+
+
+/* Grå overlay */
+#cookie-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5); /* Grå bakgrund */
+  z-index: 9998;
+}
+
+/* Cookie-popup & inställningar */
+.cookie-banner,
+.cookie-settings {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  text-align: center;
+  max-width: 90%;
+  border-radius: 10px;
+}
+.cookie-banner button{
+    padding: 10px;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+}
+
+#accept-all{
+    background-color: #b6e48b
+}
+#accept-all:hover{
+    background-color: #85d837;
+}
+#customize:hover{
+    background-color: #bbbbbb;
+}
+/* Dölj element */
+.hidden {
+  display: none;
+}
+
+/* Blockera scroll och klick */
+body.cookie-blocked {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+body.cookie-blocked #cookie-overlay,
+body.cookie-blocked .cookie-banner,
+body.cookie-blocked .cookie-settings {
+  pointer-events: auto;
+}
+
+
+#essential, #analytics, #marketing{
+    font-size: 20px;
+}
+.cookie-settings label{
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+}
+.cookie-settings p {
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.cookie-settings button{
+    padding: 10px;
+    background-color: #b6e48b;
+    border-radius: 10px;
+    border-color: #646363;
+    width: 150px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.cookie-settings button:hover{
+    background-color: #93db4f;
+}
+.omoss-content{
+    width: 100%;
+    max-width: 100%;
+    padding: 150px 100px 100px 100px;
+    margin-right: 100px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+.omoss-content img{
+    width: 700px;
+    margin-right: 150px;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 40%;
+}
+.text-container a{
+    width: 140px;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+}
+.text-container a:hover{
+    transform: scale(0.85) 
+}
+
+/*behandlingar*/
+
+.behandlingar-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 160px 0px 160px;
+    margin: 0 auto;
+}
+.behandlingar-content h1{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.behandling-boka{
+    padding: 20px;
+    border: 1px solid #000;
+    width: 160px !important;
+    margin: 0 auto;
+    text-decoration: none;
+    color: black;
+}
+.behandling-kolumner{
+    display: flex;
+    flex-direction: row;
+    gap: 170px;
+    font-size: 18px;
+    padding-bottom: 50px;
+}
+.behandling-column ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.behandling-column li, .behandling-column-pris li{ 
+    text-decoration: none;
+    list-style-type: none;
+}
+.behandling-column-pris ul{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.big-column{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+/*kontakt*/
+
+.kontakt-content{
+    width: 100%;
+    max-width: 100%;
+    padding: 150px 100px 100px 100px;
+    margin-right: 100px;
+    background-color: rgb(250, 238, 224);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+.kontakt-content img{
+    width: 700px;
+    margin-right: 150px;
+}
+.kontakt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 40%;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.copyright{
+    bottom: 0;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 5px;
+    position: absolute;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.reklam{
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    bottom: 0;
+    left: 5px;
+    position: absolute;
+}
+
+.extra-div{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 100px 0px 100px;
+}
+.extrah3{
+    font-size: 24px;
+    color: #000;
+}
+.extra-h3{
+    font-size: 30px;
+}
+#extra-fade-img{
+    width: 650px;
+    height: 650px;
+    object-fit: cover;
+}
+.extra-column1{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-width: 40%;
+    padding-left: 200px;
+    margin: 0 auto;
+}
+.extra-column2{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recensioner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.recensioner-titlar{
+    margin-top: 50px;
+}
+.recensioner-bubblor {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bildspel {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  padding-bottom: 100px;
+}
+
+.bildspel img{
+    width: 500px;
+    height: auto;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #faf5f590;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.prev {
+  left: -60px;
+  top: 100px;
+}
+
+.next {
+  right: -60px;
+  top: 100px;
+}
+
+/* CART */
+
+.cart-icon {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.cart-icon i {
+  font-size: 22px;
+  color: black;
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+
+/* KONTAKT */
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  input[type=email], select, textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .contactform {
+    border-radius: 50px;
+    background-color: #ffd49c;
+    width: 60%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    text-align: left;
+  }
+
+  .formularcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0;
+  }

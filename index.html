@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PD Bygg AB</title>
+    <link rel="stylesheet" href="stilmall.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header id="myHeader">
+        <div class="mobilmeny">        
+            <button id="meny-knapp" onclick="toggleMeny()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="logga">
+            <a href="index.html">
+                <h1>PD Bygg AB</h1>
+            </a>
+        </div>
+        <div id="meny">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HEM</a></li>
+                    <li><a href="produkter.html">PRODUKTER</a></li>
+                    <li><a href="arbete.html">BESTÄLL ARBETE</a></li>
+                    <li><a href="kontakt.html">KONTAKT</a></li>
+                    <li><a href="omoss.html">OM OSS</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cart-icon">
+            <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+
+        <div id="cart-panel" class="cart-panel hidden">
+            <h3>🛒 Din kundvagn</h3>
+            <div id="cart-items"></div>
+            <div class="cart-footer">
+                <p id="cart-total">Totalt: 0 kr</p>
+                <button id="clear-cart">Töm kundvagn</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="welcome">
+            <div class="content">
+                <div class="content-text">
+                    <h2><span class="storbokstav">S</span>kapa ditt drömhem <br>med - PD Bygg</h2>
+                    <h3>Snickeri, Murning och Plattsättning</h3>
+                    <a href="kontakt.html" class="kontaktknapp">BESTÄLL ARBETE</a>
+                    <a href="omoss.html" id="readmore"></a>
+                </div>
+                <img src="bilder/badrum.png" id="badrum">
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="kraftborsten" data-name="Kraftborsten" data-price="500">
+                <div class="bild-wrap">
+                    <img src="bilder/toaborste1.png" class="normal">
+                    <img src="bilder/toaborste2.png" class="hover-img">
+                </div>
+                <p class="product-name">Kraftborste</p>
+                <p>för alla skruvdragare</p>
+                <div class="pris-container">
+                    <p class="pris">299:-</p>
+                    <button onclick="handleAddToCart(this, 'Kraftborsten', 299, 'bilder/toaborste1', 'price_1SSmtYCZNxjGcm7PegepWJlt')" class="addtocart">KÖP</button>
+                </div>
+            </div>
+
+            <div class="kraftborsten" data-name="Hinklåset" data-price="500">
+                <div class="bild-wrap">
+                    <img src="bilder/hink1.png" class="normal">
+                    <img src="bilder/hink2.png" class="hover-img">
+                </div>
+                <p class="product-name">Hinklås</p>
+                <p>för hinkar med <br>omkrets 30-50cm</p>
+                <div class="pris-container">
+                    <p class="pris">499:-</p>
+                    <button onclick="handleAddToCart(this, 'Hinklåset', 499, 'bilder/hink1', 'price_1SSn9gCZNxjGcm7PbWQfKafg')" class="addtocart">KÖP</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="instagram-div fade-in">
+            <a href="https://www.instagram.com/pdbygg/?hl=en">
+                <h3>Följ oss på Instagram</h3>
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.instagram.com/pdbygg/?hl=en" class="instatagg">@pdbyggab</a>
+        </div>
+
+        <div class="extra-div fade-in">
+            <div class="extra-column2">
+                <img src="bilder/badrum.png" id="extra-fade-img">
+            </div>
+            <div class="extra-column1">
+                <h3 class="extrah3">Tidigare arbeten</h3>
+            </div>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="meny-footer">
+                <div class="footer-column1">
+                    <h4>Kontakt</h4> 
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-phone"></i>+46762082095</a></li>
+                        <li><a href=""><i class="fa-solid fa-envelope"></i>pdbyggab@hotmail.com</a></li>
+                        <a href="arbete.html" class="bestallarbeteknapp">BESTÄLL ARBETE</a>
+                    </ul>
+                </div>
+                <div class="footer-column2">
+                    <h4>Meny</h4>
+                    <ul>
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="arbete.html">Beställ arbete</a></li>
+                        <li><a href="produkter.html">Produkter</a></li>
+                        <li><a href="bilder.html">Tidigare arbeten</a></li>
+                        <li><a href="omoss.html">Om oss</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="reklam">Made by webbkontakt.se</p>
+        <p class="copyright">©2025 pdbygg</p>
+    </footer>
+
+    <div id="cookie-overlay"></div>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Vi använder cookies för att förbättra din upplevelse.</p>
+        <button id="accept-all">Acceptera alla</button>
+        <button id="customize">Anpassa</button>
+    </div>
+    <div id="cookie-settings" class="cookie-settings" style="display: none;">
+        <p>Välj vilka cookies du godkänner:</p>
+        <label><input type="checkbox" id="essential" checked disabled> Nödvändiga (krävs)</label><br>
+        <label><input type="checkbox" id="analytics"> Analys</label><br>
+        <label><input type="checkbox" id="marketing"> Marknadsföring</label><br>
+        <button id="save-settings">Acceptera</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
